@@ -37,3 +37,9 @@
 figure video {
 	mix-blend-mode: overlay;
 } */
+
+.border {
+  border-style: solid;
+  border-width: 2px;
+  border-image: linear-gradient(-41deg,#9ebbe8 0%,#ff4ca9 53%,#fec169 100%) 1;
+}

@@ -10,10 +10,10 @@ export default function Unlock() {
            <Box pt={12}color="white" display="flex" flexDirection="column" alignItems="center" justifyContent="center">
             <Image src="/unlock_community.png" alt="Unlock Communities" w="35rem" />
             <Image src="vrHeadSet.png" alt="VR HeadSet" w="20rem" transform="translate(0,-30px)" />
-            <Heading px={4} fontSize="md" textTransform="uppercase" fontFamily="gotham" border="1px solid white" borderRadius="md">
+            <Heading px={4} py={2} transform="translate(0,-2.25rem)" zIndex="1000" letterSpacing="wider" fontSize="md" textTransform="uppercase" fontFamily="gotham" className="border" borderRadius="md" bgGradient="linear(-41deg,#9ebbe8 0%,#ff4ca9 53%,#fec169 100%)" bgClip="text">
                 exclusive vr enabled discord communities
             </Heading>
-            <Text mt={4} fontFamily="gotham" textTransform="uppercase" fontStyle="italic" fontSize="xs">invested in #hashtag?meet like minded #hashtaggers</Text>
+            <Text mt={4} fontFamily="gotham" transform="translate(0,-3rem)" textTransform="uppercase" fontStyle="italic" fontSize="xs" bgGradient="linear(-41deg,#9ebbe8 0%,#ff4ca9 53%,#fec169 100%)" bgClip="text">invested in #hashtag?meet like minded #hashtaggers</Text>
            </Box>
        </Box>
     )
