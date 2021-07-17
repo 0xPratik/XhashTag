@@ -36,13 +36,13 @@ export default function Home() {
         <meta name="description" content="A Multichain protocol to speculate on trends" />
         {/* <link rel="icon" href="/logo.png" /> */}
       </Head>
-      <Box w="100vw" bg="white" zIndex="100" position="relative" border="3px solid" borderColor="pink.700">
-      <video autoPlay loop style={{width:"100vw",height:"100vh",overflowX:"hidden",zIndex:"-99",objectFit:"cover"}} >
+      <Box w="100vw" bg="white" zIndex="100" position="relative" bg="black">
+      <video autoPlay loop style={{transform:"translate(25rem,0rem)",width:"100%",height:"100vh",overflowX:"hidden",zIndex:"-99",objectFit:"contain"}} >
                 <source src="/xhashvideo.mp4" type="video/mp4" />
       </video>
       <NavBar />
       <Header />
-      <Box position="absolute" right="2rem" top="10rem">
+      <Box position="absolute" right="4rem" top="17rem">
         <Image src="/boxes.png" alt="Boxes" w="25rem" />
       </Box>
       </Box>
