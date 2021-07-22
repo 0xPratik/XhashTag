@@ -2,30 +2,33 @@ import {Box,Image,Text,Heading} from "@chakra-ui/react"
 
 export default function Main() {
     return (
-        <Box bg="black" w="100vw" pt={20} pb={20}>
-            <Box display="flex" flexDir="row" alignItems="center" justifyContent="space-between" flexWrap="wrap">
-            <Box w="50vw" d="flex" alignItems="center" justifyContent="center">
-            <Image src="/liquidity.png" alt="Liquidity" width="15rem" />
+        <Box bg="black" w="100vw" py={10}>
+            <Box display="flex" flexDir="row" alignItems="center" justifyContent="space-evenly" flexWrap="wrap">
+            {/* liquidity */}
+            <Box w="50vw" d="flex" pb={3} alignItems="center" justifyContent="center">
+            <Image src="/images/dollar_bag.png" alt="Liquidity" width="15rem" />
             </Box>
-            <Box mr={8} color="white" w="45vw" d="flex" flexDirection="column" justifyContent="center" >
-                <Image src="/liqtext.png" w="25rem" mb={2} />
+            <Box mr={8} pb={3} color="white" w="45vw" d="flex" flexDirection="column" justifyContent="center" >
+                <Image src="/images/liquidity.png" w="25rem" mb={2} />
                 <Text fontFamily="gotham" fontWeight="bold" fontSize="xl">Built in AMM with bonding curve ensures liquidity for #hashtags without any counterparty</Text>
             </Box>
-            <Box ml={8} color="white" w="45vw" d="flex" alignItems="flex-start" justifyContent="flex-start" flexDir="column">
-            <Image src="/multichainText.png" w="25rem" mb={2} />
-                <Text fontFamily="gotham" fontWeight="bold" fontSize="xl" >Transfer your #hashtag to multiple networks supported by Solana Wormhole bridge</Text>
+            {/* ############################################### */}
+            <Box ml={8} pb={3} color="white" w="45vw" d="flex" alignItems="flex-start" justifyContent="flex-start" flexDir="column">
+            <Image src="/images/fee.png" w="10rem" mb={2} />
+                <Text fontFamily="gotham" fontWeight="bold" fontSize="xl" >A 1.5% tx fee is charged which is used for LP acquisition and rewards</Text>
             </Box>
+            {/* ############################################### */}
+            
             <Box w="50vw" d="flex" alignItems="center" justifyContent="center">
-            <Image src="/link.png" alt="Liquidity" width="15rem" />
+            <Image src="/images/onepointfive.png" alt="Liquidity" width={{base:"20rem",md:"13rem"}} />
             </Box>
-            <Box w="50vw" d="flex" alignItems="center" justifyContent="center">
-            <Image src="/airdrop.png" alt="Liquidity" width="15rem" />
+            <Box m={{base:5}} w="50vw" pb={3} d="flex" alignItems="center" justifyContent="center">
+            <Image src="images/airdrop.png" alt="Liquidity" width="15rem" />
             </Box>
             <Box mr={8} color="white" w="45vw">
-                <Image src="/airdropText.png" w="25rem" mb={2} />
-                <Text fontFamily="gotham" fontWeight="bold" fontSize="xl">Top trending #hashtags on twitter and tiktok receive rewards on xHASHTAG</Text>
+                <Image src="images/rewards.png" w="25rem" mb={2} />
+                <Text fontFamily="gotham" fontWeight="bold" fontSize="xl">#hashtags that trend on Twitter are rewarded with sponsored burn, increasing the price</Text>
             </Box>
-           
             </Box>
         </Box>
     )
