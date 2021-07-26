@@ -5,6 +5,10 @@ export default function Main() {
     <Box
       borderBottom="3px solid #BE3E82"
       borderTop="3px solid #BE3E82"
+      boxShadow=" 0 0 7px #fff,
+      0 0 10px #0f0f0f,
+      0 0 30px #E55381,
+      0 0 30px #E55381"
       bg="#0f0f0f"
       d="flex"
       position="relative"
@@ -19,7 +23,7 @@ export default function Main() {
         alt="crossarrow"
         w="20rem"
         pos="absolute"
-        top="-2.5rem"
+        top="-3rem"
         left="-4rem"
       />
       <Image
@@ -29,7 +33,7 @@ export default function Main() {
         transform="scaleX(-1)"
         w="20rem"
         pos="absolute"
-        top="-2.5rem"
+        top="-3rem"
         right="-4rem"
       />
       <Image
@@ -39,7 +43,7 @@ export default function Main() {
         transform="scaleY(-1)"
         w="20rem"
         pos="absolute"
-        top="65rem"
+        top="63.5rem"
         left="-4rem"
       />
       <Image
@@ -49,7 +53,7 @@ export default function Main() {
         transform="scaleX(-1) scaleY(-1)"
         w="20rem"
         pos="absolute"
-        top="65rem"
+        top="63.5rem"
         right="-4rem"
       />
       <Box
@@ -98,11 +102,12 @@ export default function Main() {
           <Text
             fontFamily="gotham"
             fontWeight="bold"
+            fontStyle="italic"
             fontSize="xl"
             color="white"
           >
-            A 1.5% tx fee is charged which is used for LP acquisition and
-            rewards
+            A 2% tx fee is charged which is used for LP acquisition, auto
+            staking rewards and prediction bounty
           </Text>
         </Box>
         <Box
@@ -113,7 +118,7 @@ export default function Main() {
           mr={{ base: "2rem", md: "1rem", lg: "5rem" }}
         >
           <Image
-            src="/images/onepointfive.png"
+            src="/images/2percent.png"
             alt="Liquidity"
             width={{ base: "20rem", md: "27rem" }}
           />
@@ -136,7 +141,7 @@ export default function Main() {
           <Image src="images/airdrop.png" alt="Liquidity" width="17rem" />
         </Box>
         <Box flex="1" mr={{ base: "2rem", md: "1rem", lg: "5rem" }}>
-          <Image src="images/rewards.png" alt="liquidity" w="27rem" />
+          <Image src="images/bounty.png" alt="liquidity" w="27rem" />
           <Text
             pt={2}
             fontFamily="gotham"
@@ -145,8 +150,8 @@ export default function Main() {
             fontSize={{ lg: "lg", md: "md", base: "sm" }}
             fontStyle="italic"
           >
-            #hashtags that trend on Twitter are rewarded with sponsored burn,
-            increasing the price
+            Predict the hashtags that trend on popular social media platforms
+            and recieve hourly airdrops
           </Text>
         </Box>
       </Box>

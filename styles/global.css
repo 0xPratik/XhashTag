@@ -1,30 +1,37 @@
 @font-face {
-    font-family: "GothamBold";
-    src: url("/fonts/GothamBold.otf");
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "MonumentExtended-Regular";
-    src: url("/fonts/MonumentExtended-Regular.otf");
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "MonumentExtended-UltraBold";
-    src: url("/fonts/MonumentExtended-Ultrabold.otf");
-    font-display: swap;
-  }
+  font-family: "GothamBold";
+  src: url("/fonts/GothamBold.otf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "MonumentExtended-Regular";
+  src: url("/fonts/MonumentExtended-Regular.otf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "MonumentExtended-UltraBold";
+  src: url("/fonts/MonumentExtended-Ultrabold.otf");
+  font-display: swap;
+}
 
-
-  
-  
-.hashtag{
-  background: -webkit-linear-gradient(-41deg, #81bee8 0%, #ff4ca9 53%, #fec169 100%);
+.hashtag {
+  background: -webkit-linear-gradient(
+    -41deg,
+    #81bee8 0%,
+    #ff4ca9 53%,
+    #fec169 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.liquidity{
-  background: -webkit-linear-gradient(-86deg, #EEF85B 5%, #7AEC8D 53%, #09E5C3 91%);
+.liquidity {
+  background: -webkit-linear-gradient(
+    -86deg,
+    #eef85b 5%,
+    #7aec8d 53%,
+    #09e5c3 91%
+  );
   -webkit-background-clip: text;
   -webkit-text-stroke: 4px transparent;
   color: #232d2d;
@@ -41,5 +48,35 @@ figure video {
 .border {
   border-style: solid;
   border-width: 2px;
-  border-image: linear-gradient(-41deg,#9ebbe8 0%,#ff4ca9 53%,#fec169 100%) 1;
+  border-image: linear-gradient(-41deg, #9ebbe8 0%, #ff4ca9 53%, #fec169 100%) 1;
+}
+
+#videoBG {
+  width: "100vw";
+  height: "100vh";
+  position: fixed;
+  overflow-y: "hidden";
+  overflow-x: "hidden";
+  z-index: -1;
+}
+@media (min-aspect-ratio: 16/9) {
+  #videoBG {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  #videoBG {
+    width: auto;
+    height: 100%;
+  }
+}
+@media (max-width: 767px) {
+  #videoBG {
+    display: none;
+  }
+  body {
+    background: url("/poster.png");
+    background-size: cover;
+  }
 }

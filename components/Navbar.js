@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import {
   Box,
   Flex,
@@ -25,9 +26,36 @@ import {
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
+  const [navbar, setNavbar] = useState(true);
+  console.log(navbar);
+
+  if (typeof window !== "undefined") {
+    const changeNav = () => {
+      if (window.scrollY > 100) {
+        setNavbar(true);
+      } else {
+        setNavbar(false);
+      }
+    };
+    window.addEventListener("scroll", changeNav);
+  }
 
   return (
-    <Box pos="fixed" top="0px" w="100vw" zIndex="10000">
+    <Box
+      pos="fixed"
+      top="0px"
+      w="100vw"
+      zIndex="10000"
+      bg={navbar && "rgba( 28, 25, 29, 0.25)"}
+      bgopacity="30%"
+      borderRadius="md"
+      sx={
+        navbar && {
+          "backdrop-filter": "blur( 15.0px)",
+          "-webkit-backdrop-filter": "blur( 15.0px )",
+        }
+      }
+    >
       <Flex
         bg={useColorModeValue("transparent", "gray.800")}
         color="whiteAlpha.100"
@@ -42,6 +70,7 @@ export default function WithSubnavigation() {
           display={{ base: "flex", md: "none" }}
         >
           <IconButton
+            color="white"
             onClick={onToggle}
             icon={
               isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
@@ -79,7 +108,7 @@ export default function WithSubnavigation() {
 
 const DesktopNav = () => {
   const linkColor = useColorModeValue("white", "gray.200");
-  const linkHoverColor = useColorModeValue("gray.800", "white");
+  const linkHoverColor = useColorModeValue("green", "orange");
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
 
   return (
@@ -97,7 +126,8 @@ const DesktopNav = () => {
                 color={linkColor}
                 _hover={{
                   textDecoration: "none",
-                  color: linkHoverColor,
+                  bgGradient: "linear(to-l, #81bee8,#ff4ca9,#fec169)",
+                  bgClip: "text",
                 }}
               >
                 {navItem.label}
@@ -233,36 +263,19 @@ const MobileNavItem = ({ label, children, href }) => {
 
 const NAV_ITEMS = [
   {
-    label: "Menu",
-    children: [
-      {
-        label: "Explore Design Work",
-        subLabel: "Trending Design to inspire you",
-        href: "#",
-      },
-    ],
-  },
-  {
     label: "Docs",
-    children: [
-      {
-        label: "Job Board",
-        subLabel: "Find your dream design job",
-        href: "#",
-      },
-      {
-        label: "Freelance Projects",
-        subLabel: "An exclusive list for contract work",
-        href: "#",
-      },
-    ],
+    href: "https://docs.xhashtag.io/",
   },
   {
-    label: "Community",
-    href: "#",
+    label: "Medium",
+    href: "https://medium.com/@xhashtagio",
   },
   {
-    label: "About us",
-    href: "#",
+    label: "Twitter",
+    href: "https://twitter.com/xhashtagio",
+  },
+  {
+    label: "Discord",
+    href: "https://discord.gg/DARQahW5",
   },
 ];
