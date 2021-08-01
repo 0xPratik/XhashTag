@@ -1,9 +1,11 @@
 import { Box, Text, Image } from "@chakra-ui/react";
 
+//These are the Boxes that gets displayed in smaller screens
+
 export default function DisplayBoxes() {
   return (
     <Box
-      display={{ base: "block", md: "none", lg: "none" }}
+      display={['block','block','none','none']}
       d="flex"
       alignItems="center"
       justifyContent="space-evenly"

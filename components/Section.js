@@ -6,8 +6,15 @@ import {
   OrderedList,
   UnorderedList,
 } from "@chakra-ui/react";
+import { useState,useEffect } from "react";
 
 export default function Section() {
+
+  const [width,setWidth] = useState();
+  useEffect(() => {
+    setWidth(window.innerWidth);
+  },[width]);
+  
   return (
     <Box
       d="flex"
@@ -15,18 +22,13 @@ export default function Section() {
       justifyContent="flex-end"
       w="100%"
       h="30rem"
-      bgImage="url('/back.png')"
-      bgPosition="center"
-      bgRepeat="no-repeat"
-      bgSize="cover"
+      bgGradient={width < 500 ? "linear(to-r, #166088, pink.700)" : null}
+      backgroundImage={width > 400 ? "url('/back.png')" :null}
+      backgroundPosition={width > 400 ? "center" :null}
+      backgroundRepeat={width > 400 ? "no-repeat" :null}
+      backgroundSize={width > 400 ? "cover" :null}
     >
-      <Box mr={{ base: "1rem", md: "4rem", lg: "10rem" }} color="white">
-        <Image
-          src="/usecases.png"
-          alt="UseCases"
-          w={{ base: "20rem", md: "30rem", lg: "40rem" }}
-          mb={5}
-        />
+      <Box m={{base:"1rem"}} mr={{ base: "1rem", md: "4rem", lg: "10rem" }} d="flex" flexDir="column" alignItems="center" color="white">
         <UnorderedList>
           <ListItem>
             <Text

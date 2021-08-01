@@ -8,7 +8,9 @@ export default function SocialWallet() {
       flexDir="column"
       alignItems={{ base: "center", md: "center", lg: "flex-start" }}
       justifyContent="center"
+      zIndex="1000"
       w="100vw"
+      minH="20rem"
       overflowX="hidden"
       pl={{ base: "0", lg: "8" }}
       pt={10}
@@ -21,9 +23,8 @@ export default function SocialWallet() {
       <Box
         w={{ base: "100vw", lg: "45vw" }}
         d="flex"
-        p={{ base: "6", lg: "4" }}
         alignItems="center"
-        justifyContent="space-evenly"
+        justifyContent="space-between"
       >
         <Image
           src="/images/twitter.png"
@@ -32,12 +33,12 @@ export default function SocialWallet() {
         />
         <Image
           src="/images/insta.png"
-          alt="Twitter"
+          alt="Instagram"
           w={{ base: "5rem", lg: "10rem" }}
         />
         <Image
           src="/images/tictok.png"
-          alt="Twitter"
+          alt="TickTok"
           w={{ base: "5rem", lg: "10rem" }}
         />
       </Box>

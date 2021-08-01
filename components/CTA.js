@@ -50,7 +50,7 @@ const DataInput = () => {
       py={2}
       px={1}
       borderRadius="base"
-      w="25rem"
+      w={{base:"20rem",md:"30rem"}}
     >
       <InputGroup>
         <Input
@@ -104,15 +104,15 @@ const LaunchInvite = () => {
       py={2}
       px={1}
       borderRadius="lg"
-      bg="gray.900"
-      w="25rem"
+      bg="blue.900"
+      w={{base:"20rem",md:"30rem"}}
       _hover={{
         bgGradient: "linear(to-l, #7928CA, #FF0080)",
       }}
     >
       <Icon ml={2} as={BiBell} w={8} h={8} color="white" mr={2} />
-      <Text fontSize="2xl" fontFamily="gotham" color="gray.200">
-        Email me at Launch
+      <Text fontSize="2xl" fontFamily="sans-serif" color="gray.200">
+        Email me at launch
       </Text>
     </Box>
   );
@@ -130,12 +130,6 @@ export default function CTA() {
 
   return (
     <Box
-      w="100vw"
-      p={10}
-      d="flex"
-      bg="#0f0f0f"
-      alignItems="center"
-      justifyContent="center"
     >
       <button onClick={() => setShow(true)}>{information}</button>
     </Box>

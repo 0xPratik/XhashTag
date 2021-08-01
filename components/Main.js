@@ -5,6 +5,7 @@ export default function Main() {
     <Box
       borderBottom="3px solid #BE3E82"
       borderTop="3px solid #BE3E82"
+      zIndex="1000"
       boxShadow=" 0 0 7px #fff,
       0 0 10px #0f0f0f,
       0 0 30px #E55381,
@@ -98,12 +99,12 @@ export default function Main() {
           ml={{ base: "3rem", md: "8rem" }}
           mr={{ base: "1rem", md: "2rem" }}
         >
-          <Image src="/images/fee.png" alt="fee" w="15rem" mb={2} />
+          <Image src="/images/fee.png" alt="fee" w={{base:"5.5rem",lg:"15rem",md:"15rem"}} mb={2} />
           <Text
             fontFamily="gotham"
             fontWeight="bold"
             fontStyle="italic"
-            fontSize="xl"
+            fontSize={{ lg: "lg", md: "md", base: "sm" }}
             color="white"
           >
             A 2% tx fee is charged which is used for LP acquisition, auto

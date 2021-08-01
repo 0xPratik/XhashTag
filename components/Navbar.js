@@ -80,7 +80,7 @@ export default function WithSubnavigation() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <Image src="/logo.png" alt="XHashTag" h="1.3rem" ml={6} />
+          <Image src="/logo.png" alt="XHashTag" h={{base:"1rem",md:"1.3rem"}} ml={6} />
           <Flex
             display={{ base: "none", md: "flex" }}
             alignItems="center"

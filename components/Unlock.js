@@ -8,7 +8,7 @@ export default function Unlock() {
       alignItems="center"
       justifyContent="center"
       w="100vw"
-      h="100vh"
+      h={{base:"50vh",lg:"100vh",md:"100vh",lg:"97vh","2xl":"95vh"}}
       bg="#0f0f0f"
       borderbottom="4px solid pink"
     >
